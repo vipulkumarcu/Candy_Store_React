@@ -11,6 +11,12 @@ function Form ()
 
   function submitHandler ()
   {
+    if ( !name || !description || !price || isNaN ( price ) || Number ( price ) <= 0 )
+    {
+      alert ( "Please enter valid candy details." );
+      return;
+    }
+
     const candy = {
       id: Date.now().toString(),
       name: name,
