@@ -22,7 +22,7 @@ function App ()
 
       <div>
         <button onClick = { toggleCart }>
-          Cart <span> { context.totalCartQuantity } </span>
+          Cart <span> { context.candyCart.length } </span>
         </button>
         {
           isVisible && <Cart />
