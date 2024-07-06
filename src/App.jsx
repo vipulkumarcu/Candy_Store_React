@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react'
-import './App.css'
 import Cart from './Components/Cart/Cart'
 import Form from './Components/Form/Form'
 import List from './Components/List/List'
@@ -16,13 +15,14 @@ function App ()
   }
 
   return (
-    <>
+    <div className = "container">
 
       <h1> Candy Shop </h1>
 
-      <div>
+      <div className = "cart-button">
         <button onClick = { toggleCart }>
           Cart <span> { context.candyCart.length } </span>
+          {/* Cart <span> { context.totalCartQuantity } </span> */}
         </button>
         {
           isVisible && <Cart />
@@ -33,7 +33,7 @@ function App ()
 
       <List />
       
-    </>
+    </div>
   )
 }
 

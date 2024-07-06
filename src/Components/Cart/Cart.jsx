@@ -6,17 +6,17 @@ function Cart ()
   const context = useContext ( CandyContext );
 
   return (
-    <>
+    <div className = "cart-container">
 
       <ul>
         {
           context.candyCart.map (
             ( candy ) => (
               <li key = { candy.id }> 
-                <div> Name: { candy.name } </div>
-                <div> Descrpition: { candy.description }  </div>
-                <div> Price: { candy.price } </div>
-                <div> Amount: { candy.quantity } </div>
+                <div className = "heading"> Name : </div> { candy.name }
+                <div className = "heading"> Descrpition : </div> { candy.description }
+                <div className = "heading"> Price : </div> { candy.price } 
+                <div className = "heading"> Amount : </div> { candy.quantity }
                 <button onClick = { () => ( context.removeCandyFromCart ( candy.id ) ) }> Remove Candy </button>
               </li>
             )
@@ -24,11 +24,11 @@ function Cart ()
         }
       </ul>
 
-      <div>
-        <span> Total Price: Rs. { context.totalCartPrice.toFixed(2) } </span>
+      <div className = "cart-summary">
+        <span className = "total-price"> Total Cart Price: Rs. { context.totalCartPrice.toFixed(2) } </span>
       </div>
 
-    </>
+    </div>
   )
 }
 

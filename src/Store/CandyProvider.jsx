@@ -99,11 +99,11 @@ function CandyProvider ( props )
 
   const candyContext = {
     candyList,
-    candyCart,
-    totalCartPrice,
-    totalCartQuantity,
     addCandyToList,
     removeCandyFromList,
+    candyCart,
+    totalCartPrice,
+    totalCartQuantity, 
     addCandyToCart,
     removeCandyFromCart,
   };

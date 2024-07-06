@@ -3,12 +3,14 @@ import { createContext } from "react";
 
 const CandyContext = createContext ( 
   {
+    //List
     candyList : [],
+    addCandyToList : ( candy ) => {},
+    removeCandyFromList : ( id ) => {},
+    //Cart
     candyCart : [],
     totalCartPrice : 0,
     totalCartQuantity : 0,
-    addCandyToList : ( candy ) => {},
-    removeCandyFromList : ( id ) => {},
     addCandyToCart : ( candy, quantity ) => {},
     removeCandyFromCart : ( id ) => {},
   }

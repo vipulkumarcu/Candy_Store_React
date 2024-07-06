@@ -32,7 +32,7 @@ function Form ()
   }
   
   return (
-    <div>
+    <div className = "form-container">
       <label htmlFor = "name"> Candy Name: </label>
       <input type = "text" name = "name" id = "name" value = { name } onChange = { ( e ) => ( setName ( e.target.value ) ) } />
       <label htmlFor = "description"> Description: </label>
