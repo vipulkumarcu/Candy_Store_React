@@ -15,11 +15,13 @@ function App ()
   }
 
   return (
-    <div className = "container">
+    <main className = "container">
 
-      <h1> Candy Shop </h1>
+      <header>
+        <h1> Candy Shop </h1>
+      </header>
 
-      <div className = "cart-button">
+      <section className = "cart-button">
         <button onClick = { toggleCart }>
           Cart <span> { context.candyCart.length } </span>
           {/* Cart <span> { context.totalCartQuantity } </span> */}
@@ -27,13 +29,17 @@ function App ()
         {
           isVisible && <Cart />
         }
-      </div>
+      </section>
 
-      <Form />
+      <section>
+        <Form />
+      </section>
 
-      <List />
+      <section>
+        <List />
+      </section>
       
-    </div>
+    </main>
   )
 }
 

@@ -9,8 +9,10 @@ function Form ()
 
   const context = useContext ( CandyContext )
 
-  function submitHandler ()
+  function submitHandler (event)
   {
+    event.preventDefault();
+    
     if ( !name || !description || !price || isNaN ( price ) || Number ( price ) <= 0 )
     {
       alert ( "Please enter valid candy details." );
@@ -32,15 +34,15 @@ function Form ()
   }
   
   return (
-    <div className = "form-container">
+    <form className = "form-container" onSubmit = { submitHandler }>
       <label htmlFor = "name"> Candy Name: </label>
       <input type = "text" name = "name" id = "name" value = { name } onChange = { ( e ) => ( setName ( e.target.value ) ) } />
       <label htmlFor = "description"> Description: </label>
       <input type = "text" name = "description" id = "description" value = { description } onChange = { ( e ) => ( setDescription ( e.target.value ) ) } />
       <label htmlFor = "price"> Price: </label>
       <input type = "text" name = "price" id = "price" value = { price } onChange = { ( e ) => ( setPrice ( e.target.value ) ) } />
-      <button onClick = { submitHandler } > Add </button>
-    </div>
+      <input type = "submit" value = "Add" className = "button" />
+    </form>
   )
 }
 
