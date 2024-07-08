@@ -22,21 +22,21 @@ function App ()
       </header>
 
       <section className = "cart-button">
-        <button onClick = { toggleCart }>
-          Cart <span> { context.candyCart.length } </span>
-          {/* Cart <span> { context.totalCartQuantity } </span> */}
-        </button>
-        {
-          isVisible && <Cart />
-        }
-      </section>
+          <button onClick = { toggleCart }>
+            Cart <span> { context.candyCart.length } </span>
+            {/* Cart <span> { context.totalCartQuantity } </span> */}
+          </button>
+          {
+            isVisible && <Cart />
+          }
+        </section>
 
       <section>
         <Form />
       </section>
 
       <section>
-        <List />
+        <List />        
       </section>
       
     </main>
